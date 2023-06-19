@@ -51,7 +51,7 @@ jobs:
 
       - name: Install dependencies
         run: python install -r requirements.txt
-        working-directory: ${{ env.PYTHON_VERSION }}
+          source venv/bin/activate
       
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
