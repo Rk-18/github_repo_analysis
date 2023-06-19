@@ -51,10 +51,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          python -m pip install -e home/runner/github_repo_analysis/github analysis2.py
-      
+          python -m pip install -e /home/runner/work/_temp/5b3d832b-a2e2-4c0c-9581-605387242f11
+    
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
