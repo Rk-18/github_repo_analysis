@@ -50,7 +50,7 @@ jobs:
           source venv/bin/activate
 
       - name: Install dependencies
-        run: nmp install -r requirements.txt
+        run: python install -r requirements.txt
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
