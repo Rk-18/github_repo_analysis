@@ -16,7 +16,19 @@
 # For more information on GitHub Actions for Azure: https://github.com/Azure/Actions
 # For more information on the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples
-
+- name: Setup Python
+  uses: actions/setup-python@v3.1.4
+  with:
+    # Version range or exact version of a Python version to use, using SemVer's version range syntax.
+    python-version: # optional, default is 3.x
+    # Used to specify a package manager for caching in the default directory. Supported values: pip, pipenv, poetry.
+    cache: # optional
+    # The target architecture (x86, x64) of the Python interpreter.
+    architecture: # optional
+    # Used to pull python distributions from actions/python-versions. Since there's a default, this is typically not supplied by the user.
+    token: # optional, default is ${{ github.token }}
+    # Used to specify the path to dependency files. Supports wildcards or a list of file names for caching multiple dependencies.
+    cache-dependency-path: # optional
 name: Build and deploy Python app to Azure Web App
 
 env:
@@ -55,7 +67,7 @@ jobs:
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Upload artifact for deployment jobs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.0.0
         with:
           name: python-app
           path: |
