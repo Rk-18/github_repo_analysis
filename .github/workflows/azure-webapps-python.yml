@@ -51,7 +51,7 @@ jobs:
 
       - name: Install dependencies
         run: python install -r requirements.txt
-          working-directory is '/home/runner/work/github_repo_analysis/github_repo_analysis' 
+          python 'github_repo_analysis.py' 
       
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
