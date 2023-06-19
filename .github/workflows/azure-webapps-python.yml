@@ -43,7 +43,7 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: 'pip'
-can not read an implicit mapping pair; a colon is missed
+
       - name: Create and start virtual environment
         run: |
           python -m venv venv
@@ -51,7 +51,7 @@ can not read an implicit mapping pair; a colon is missed
 
       - name: Install dependencies
         run: python install -r requirements.txt
-        working-directory is '/home/runner/work/github_repo_analysis/github_repo_analysis' 
+          working-directory is '/home/runner/work/github_repo_analysis/github_repo_analysis' 
       
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
