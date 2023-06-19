@@ -51,6 +51,8 @@ jobs:
 
       - name: Install dependencies
         run: python install -r requirements.txt
+        if: ${{ env.PYTHON_VERSION }}
+      
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
